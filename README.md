@@ -11,7 +11,6 @@
 * **Visual Reinforcement Fine-Tuning (VRFT):** Enhances LVLM-based referring localization through Group Relative Policy Optimization (GRPO) with verifiable rewards.
 * **Positive-Negative Sample Design:** Improves target-presence reasoning by jointly optimizing referred-object localization and no-object rejection.
 * **Dynamic Memory-guided Association (DMA):** Maintains object-level memories for referred tracklets and integrates LVLM detections with SAM2-assisted historical states.
-* **SAM2-based Temporal Propagation:** Converts sparse LVLM detections into temporally continuous mask-level object states.
 * **Open-world Referring Tracking:** Supports natural language-conditioned tracking across diverse visual domains and linguistic expressions.
 
 ## 📢 Code Availability
