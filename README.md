@@ -33,20 +33,6 @@ The source code, trained models, evaluation scripts, and detailed instructions w
 | VRFTrack† | Qwen3-VL |   36.17   |   22.46   |   58.54   |   53.97   |   27.19   |   69.68   |   77.19   |   86.63   |
 | VRFTrack⋆ | Qwen3-VL | **41.26** | **27.39** | **62.78** | **57.83** | **33.44** | **76.26** | **85.27** | **87.97** |
 
-### Refer-Dance
-
-|   Method  | Backbone |    HOTA   |    DetA   |    AssA   |   DetRe   |   AssRe   |
-| :-------: | :------: | :-------: | :-------: | :-------: | :-------: | :-------: |
-| VRFTrack† | Qwen3-VL |   55.27   |   46.18   |   66.24   |   71.41   |   55.47   |
-| VRFTrack⋆ | Qwen3-VL | **57.65** | **48.91** | **69.46** | **78.89** | **73.75** |
-
-### Refer-BDD
-
-|   Method  | Backbone |    HOTA   |    DetA   |    AssA   |   AssRe   |    LocA   |
-| :-------: | :------: | :-------: | :-------: | :-------: | :-------: | :-------: |
-| VRFTrack† | Qwen3-VL |   33.50   |   19.64   |   57.73   |   68.50   |   86.71   |
-| VRFTrack⋆ | Qwen3-VL | **41.36** | **29.74** | **58.52** | **69.41** | **88.37** |
-
 `†` denotes zero-shot results.
 `⋆` denotes results obtained using the LVLM after visual reinforcement fine-tuning.
 
