@@ -17,119 +17,6 @@
 
 The source code, trained models, evaluation scripts, and detailed instructions will be made publicly available upon acceptance.
 
-## 🛠️ Setup
-
-The installation instructions will be released upon acceptance.
-
-The expected setup will include:
-
-```bash
-git clone https://github.com/acyddl/VRFTrack.git
-cd VRFTrack
-
-conda create -n VRFTrack python=3.10 -y
-conda activate VRFTrack
-
-pip install -r requirements.txt
-```
-
-The repository will provide detailed instructions for installing dependencies related to Qwen3-VL, SAM2, and visual reinforcement fine-tuning.
-
-## 📦 Model Preparation
-
-The model preparation instructions will be released upon acceptance.
-
-VRFTrack uses the following components:
-
-* **Qwen3-VL-4B** as the backbone LVLM.
-* **SAM2.1 Hiera Large** for mask-level temporal propagation.
-* Fine-tuned VRFTrack checkpoints obtained through visual reinforcement fine-tuning.
-
-The expected model directory structure will be:
-
-```bash
-checkpoints/
-├── qwen3-vl-4b/
-├── sam2.1_hiera_large.pt
-└── vrftrack_qwen3vl_grpo/
-```
-
-## 📅 Dataset
-
-VRFTrack is evaluated on multiple RMOT benchmarks:
-
-* Refer-KITTI
-* Refer-KITTI-V2
-* Refer-KITTI+
-* Refer-Dance
-* Refer-BDD
-
-The proposed Reason-Track dataset is constructed by reformulating RMOT annotations into frame-level image-language grounding samples with positive and negative supervision.
-
-Detailed dataset preparation scripts and instructions will be released upon acceptance.
-
-The expected dataset structure will be:
-
-```bash
-datasets/
-├── Refer-KITTI/
-├── Refer-KITTI-V2/
-├── Refer-KITTI-plus/
-├── Refer-Dance/
-├── Refer-BDD/
-└── Reason-Track/
-```
-
-## 🏋️ Visual Reinforcement Fine-Tuning
-
-Before tracking, VRFTrack fine-tunes the LVLM using GRPO with verifiable rewards for localization accuracy, confidence reliability, and response format correctness.
-
-The training scripts for visual reinforcement fine-tuning will be released upon acceptance.
-
-The expected command will be:
-
-```bash
-sh configs/vrftrack_grpo_train.sh
-```
-
-The training process uses positive samples for referred-object localization and negative samples for target-absent reasoning. The model is optimized to output structured responses with normalized bounding boxes and confidence scores.
-
-## 🔍 Inference
-
-The inference scripts will be released upon acceptance.
-
-The expected commands will be:
-
-```bash
-sh configs/vrftrack_test_refer_kitti.sh
-sh configs/vrftrack_test_refer_kitti_v2.sh
-sh configs/vrftrack_test_refer_kitti_plus.sh
-sh configs/vrftrack_test_refer_dance.sh
-sh configs/vrftrack_test_refer_bdd.sh
-```
-
-During inference, the fine-tuned LVLM provides sparse language-conditioned detections, SAM2 propagates object masks across frames, and DMA associates current detections with historical tracklets to preserve object identities.
-
-## 📊 Evaluation
-
-The evaluation scripts will be released upon acceptance.
-
-The expected evaluation command will be:
-
-```bash
-cd TrackEval/scripts
-sh evaluate_rmot.sh
-```
-
-The main metrics include:
-
-* **HOTA:** Overall tracking performance.
-* **DetA:** Detection accuracy.
-* **AssA:** Association accuracy.
-* **LocA:** Localization accuracy.
-* **DetRe / DetPr:** Detection recall and precision.
-* **AssRe / AssPr:** Association recall and precision.
-
 ## 🏆 Main Results
 
 ### Refer-KITTI
@@ -162,14 +49,6 @@ The main metrics include:
 
 `†` denotes zero-shot results.
 `⋆` denotes results obtained using the LVLM after visual reinforcement fine-tuning.
-
-## 🎬 Visualization
-
-Visualization scripts and examples will be released upon acceptance.
-
-<p align="center">
-  <img src="./assets/visualization.png" width="900"/>
-</p>
 
 ## 📜 License
 
