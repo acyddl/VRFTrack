@@ -1,7 +1,6 @@
 # 🚀 VRFTrack: Visual Reinforcement Fine-Tuning of Large Vision-Language Models for Referring Multi-Object Tracking
 
-**VRFTrack** is a novel Referring Multi-Object Tracking (RMOT) framework that integrates visually reinforced Large Vision-Language Models (LVLMs) with Segment Anything Model 2 (SAM2) for robust language-conditioned tracking. It exploits the reasoning capability of LVLMs for referring localization and uses SAM2-based temporal propagation with Dynamic Memory-guided Association (DMA) to maintain temporally consistent object identities.
-
+**VRFTrack** is a novel Referring Multi-Object Tracking (RMOT) method that enhances LVLM-based referring localization through visual reinforcement fine-tuning. By introducing positive-negative sample groups and verifiable rewards, VRFTrack improves target-presence reasoning, suppresses hallucinated detections, and provides reliable language-conditioned anchors for SAM2-based temporal propagation. A Dynamic Memory-guided Association (DMA) module further maintains object-level memories to preserve temporally consistent referred identities.
 <p align="center">
   <img src="./assets/framework.png" width="900"/>
 </p>
